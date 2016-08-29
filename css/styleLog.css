@@ -1,0 +1,112 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	background-color: white;
+	font-family: "Open-sans";
+	overflow: hidden;
+
+}
+#head{
+	height: 50px;
+	width: 100%;
+	background-color: rgb(145,0,35);
+	padding: 5px;
+	position: fixed;
+}
+#logo{
+	width: 50px;
+	height: 50px;
+}
+#img_logo{
+	height: 50px;
+	width: 50px;
+}
+#logBox{
+	width: 170px;
+	height: 300px;
+	transform: perspective(500px) translateZ(200px);
+	/*border: solid 2px black;*/
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+
+	animation-duration: 1s;
+	animation-name: viewInput;
+}
+
+.inputContent{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+    width: 170px;
+}
+.icon{
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	opacity: .3;
+}
+.inputEdit{
+	width: 130px;
+	display: inline-block;
+	vertical-align: top;
+}
+	
+input{
+	appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    background-color: white;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none; 
+    border-bottom-color: rgb(190,190,190);
+}
+
+
+input[type=submit]{
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	border-color: rgb(145,0,35);
+	cursor: pointer;
+	margin-bottom: 30px;
+}
+
+input:focus{
+	outline: 0px;
+	animation-duration: .5s;
+	animation-name: focusInput;
+	border-bottom-color: #04B431;
+}
+
+
+a{
+	font-size: 10px;
+	color: rgb(145,0,35);
+}
+
+@keyframes focusInput {
+  from {
+    border-bottom-color: white;
+  }
+
+  to {
+    border-bottom-color: #04B431;
+  }
+}
+
+@keyframes viewInput {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
