@@ -23,3 +23,26 @@ html, body{
 	color: white;
 
 }
+li{
+	cursor: pointer;
+}
+
+.item{
+	list-style: none;
+	width: 100%;
+	padding-top:10px;
+	padding-bottom: 10px;
+	border-bottom:solid .5px white; 
+}
+ul{
+	width: 100%;
+	padding-left: 0px;
+}
+.item ul{
+	width: 100%;
+	padding-left: 30px;
+}
+
+.subitem{
+	list-style: none;
+}
