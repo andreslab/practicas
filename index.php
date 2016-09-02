@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/styleLog.css">
-</head>
+<?php include("includes/incHead.php") ?>
 <body>
+	<link rel="stylesheet" type="text/css" href="css/styleLog.css">
 	<section id="head">
 		<div id="logo">
 			<img id="img_logo" src="img/LOGO-UCSG2.png">
@@ -24,5 +20,11 @@
 		</form>
 		<a href="newUser.php">Create User</a>
 	</section>
+	<?php 
+		include_once "resources/tools.php";
+	 
+		$connect= new tools();
+		$connect->connectDB();
+	 ?>
 </body>
 </html>

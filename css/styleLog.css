@@ -6,21 +6,6 @@ body{
 	overflow: hidden;
 
 }
-#head{
-	height: 50px;
-	width: 100%;
-	background-color: rgb(145,0,35);
-	padding: 5px;
-	position: fixed;
-}
-#logo{
-	width: 50px;
-	height: 50px;
-}
-#img_logo{
-	height: 50px;
-	width: 50px;
-}
 #logBox{
 	width: 170px;
 	height: 300px;
