@@ -4,7 +4,8 @@
 
 <link rel="stylesheet" type="text/css" href="css/styleMain.css">
 		<section id="menu"><br><br><br><br>
-			menu</section>
+			<?php include("includes/incMenu.php"); ?>
+		</section>
 		<section id="view"><br><br><br><br>
 			<?php include("includes/requestView.php"); ?>
 	</section>
