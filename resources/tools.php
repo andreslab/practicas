@@ -3,15 +3,14 @@ include_once "utils.php";
 
 class tools{
 	function connectDB(){
-		try{
-			$pdo = new PDO(DSN,
+		
+			$link = new PDO(DSN,
 	 				USER,
 	 				PASS);
-			echo "Conección Exitosa";
-		}
-		catch(PDOException $e){
-			echo "Error al connectarnos ".$e->getMessage();
-		}
+			echo "<script>alert('Conección a DB Exitosa');</script>";
+
+			return $link;
+		
 	}
 
 	function disconnectDB($conexion){	
