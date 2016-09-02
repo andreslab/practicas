@@ -1,14 +1,6 @@
-body{
-	margin: 0px;
-	padding: 0px;
-	background-color: white;
-	font-family: "Open-sans";
-	overflow: hidden;
-
-}
 #logBox{
 	width: 170px;
-	height: 300px;
+	height: 200px;
 	transform: perspective(500px) translateZ(200px);
 	/*border: solid 2px black;*/
 	position: absolute;
@@ -18,7 +10,6 @@ body{
 	right: 0;
 	margin: auto;
 	text-align: center;
-
 	animation-duration: 1s;
 	animation-name: viewInput;
 }

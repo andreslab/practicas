@@ -1,0 +1,29 @@
+html, body{
+	height: 100%;
+	width: 100%;
+}
+#block{
+	position: absolute;
+	z-index: 1;
+	margin-top: 60px;
+	height: 100%;
+	width: 100%;
+}
+
+#view{
+	display: inline-block;
+	width: 78%;
+	height: 100%;
+	background-color:white; 
+	vertical-align: top;
+	color: gray;
+	padding: 5px;
+}
+#menu{
+	width: 20%;
+	height: 100%;
+	padding: 5px;
+	background-color:rgb(100,100,100);
+	display: inline-block;
+	color: white;
+}
