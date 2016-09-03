@@ -6,6 +6,7 @@
 		$statement->execute(array());
 		$result = $statement->fetchAll();
 		echo "<table>";
+		echo"<br><br><br><br>";
 		foreach ($result as $key) {
 			echo "<tr>";
 				echo "<td>";

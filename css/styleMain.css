@@ -3,6 +3,10 @@ html, body{
 	width: 100%;
 	position: relative;
 }
+.both{
+	display: inline-block;
+	padding-right: 25px;
+}
 
 #view{
 	display: inline-block;
@@ -11,7 +15,9 @@ html, body{
 	background-color:white; 
 	vertical-align: top;
 	color: darkgray;
-	padding: 5px;
+	padding-top: 0px;
+	padding-bottom: 30px;
+	padding-left: 20px;
 	overflow-y:scroll; 
 }
 #menu{
@@ -25,6 +31,35 @@ html, body{
 }
 li{
 	cursor: pointer;
+}
+input{
+	width: 150px;
+	appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    background-color: white;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none; 
+    border-bottom-color: rgb(190,190,190);
+    font-size: 20px;
+}
+
+input:focus{
+	
+	outline: 0px;
+	animation-duration: .5s;
+	animation-name: focusInput;
+	border-bottom-color: rgb(10,50,200);
+	width: 250px;
+}
+input[type=submit]{
+	border-color: rgb(145,0,35);
+	cursor: pointer;
+	border:solid .5px black;
+	margin-bottom: 30px;
+	margin-top: 20px;
 }
 
 .item{
@@ -46,3 +81,23 @@ ul{
 .subitem{
 	list-style: none;
 }
+
+@keyframes focusInput {
+  from {
+    border-bottom-color: rgb(190,190,190);
+    width: 150px;
+  }
+
+  to {
+  	width: 250px;
+    border-bottom-color: rgb(10,50,200);
+  }
+}
+td{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+

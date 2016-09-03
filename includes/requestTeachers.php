@@ -6,6 +6,7 @@
 		$statement->execute(array());
 		$result = $statement->fetchAll();
 		echo "<table>";
+		echo"<br><br><br><br>";
 		foreach ($result as $key) {
 			echo "<tr>";
 				echo "<td>";
@@ -30,6 +31,7 @@
 		$statement->execute(array());
 		$result = $statement->fetchAll();
 		echo "<table>";
+		echo"<br><br><br><br>";
 		foreach ($result as $key) {
 			echo "<tr>";
 				echo "<td>";
@@ -57,6 +59,7 @@
 		$statement->execute(array());
 		$result = $statement->fetchAll();
 		echo "<table>";
+		echo"<br><br><br><br>";
 		foreach ($result as $key) {
 			echo "<tr>";
 				echo "<td>";
@@ -80,18 +83,22 @@
 		}
 		function add(){
 			echo"<form action='' method='POST' >";
+			echo"<br><br><br><br>";
 			echo "<label for='nom_doc'>Nombre</label>";
+			echo"<br>";
 			echo"<input id='nom_doc' type='text' name='nom_doc' required>";
 
-			echo"<br>";
+			echo"<br><br>";
 			echo "<label for='ape_doc'>Apellido</label>";
+			echo"<br>";
 			echo"<input id='ape_doc' type='text' name='ape_doc' required>";
 
-			echo"<br>";
+			echo"<br><br>";
 			echo "<label for='email_doc'>Email</label>";
+			echo"<br>";
 			echo"<input id='email_doc' type='text' name='email_doc' required>";
 
-			echo"<br>";
+			echo"<br><br>";
 			echo"<input type='submit' required>";
 			echo"</form>";
 		}

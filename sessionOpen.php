@@ -1,5 +1,6 @@
 <?php include("includes/incHead.php"); ?>
 <?php include("includes/connectionDB.php"); ?>
+<?php include("includes/validateUser.php"); ?>
 <?php include("includes/requestUtils.php"); ?>
 
 <link rel="stylesheet" type="text/css" href="css/styleMain.css">

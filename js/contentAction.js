@@ -1,21 +1,21 @@
 
-document.getElementById("viewEs").style.visibility="hidden";
-document.getElementById("updateEs").style.visibility="hidden";
-document.getElementById("deleteEs").style.visibility="hidden";
-document.getElementById("addEs").style.visibility="hidden";
+document.getElementById("viewEs").style.display="none";
+document.getElementById("updateEs").style.display="none";
+document.getElementById("deleteEs").style.display="none";
+document.getElementById("addEs").style.display="none";
 
-document.getElementById("viewT").style.visibility="hidden";
-document.getElementById("updateT").style.visibility="hidden";
-document.getElementById("deleteT").style.visibility="hidden";
-document.getElementById("addT").style.visibility="hidden";
+document.getElementById("viewT").style.display="none";
+document.getElementById("updateT").style.display="none";
+document.getElementById("deleteT").style.display="none";
+document.getElementById("addT").style.display="none";
 
-document.getElementById("viewB").style.visibility="hidden";
-document.getElementById("updateB").style.visibility="hidden";
-document.getElementById("deleteB").style.visibility="hidden";
-document.getElementById("addB").style.visibility="hidden";
+document.getElementById("viewB").style.display="none";
+document.getElementById("updateB").style.display="none";
+document.getElementById("deleteB").style.display="none";
+document.getElementById("addB").style.display="none";
 
-document.getElementById("viewC").style.visibility="hidden";
-document.getElementById("updateC").style.visibility="hidden";
-document.getElementById("deleteC").style.visibility="hidden";
-document.getElementById("addC").style.visibility="hidden";
+document.getElementById("viewC").style.display="none";
+document.getElementById("updateC").style.display="none";
+document.getElementById("deleteC").style.display="none";
+document.getElementById("addC").style.display="none";
 
