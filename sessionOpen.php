@@ -2,6 +2,7 @@
 <?php include("includes/connectionDB.php"); ?>
 <?php include("includes/validateUser.php"); ?>
 <?php include("includes/requestUtils.php"); ?>
+<script type="text/javascript" src="js/configInit.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/styleMain.css">
 		<section id="menu"><br><br><br><br>

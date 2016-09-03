@@ -17,3 +17,18 @@
 	height: 50px;
 	width: 50px;
 }
+#log{
+	color: white;
+	font-size:20px;
+	position: absolute;
+	top: 20px;
+	right: 80px;
+
+}
+
+#logout{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	visibility: hidden;
+}

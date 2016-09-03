@@ -17,5 +17,9 @@
 		header("Location: index.php");
 	}
 
+	echo "<script>
+	document.getElementById('log').innerHTML='Hi, ".$inputName."'
+	</script>";
+
 
  ?>

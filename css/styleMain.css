@@ -27,12 +27,14 @@ html, body{
 	background-color:rgb(100,100,100);
 	display: inline-block;
 	color: white;
+	padding-left: 10px;
 
 }
 li{
 	cursor: pointer;
 }
 input{
+
 	width: 150px;
 	appearance: none;
     -webkit-appearance: none;

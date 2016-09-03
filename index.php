@@ -13,7 +13,7 @@
 			</div>
 			<input type="submit" name="send" value="Go">
 		</form>
-		<a href="newUser.php">Create User</a>
+		<!--<a href="newUser.php">Create User</a>-->
 	</section>
 </body>
 </html>
