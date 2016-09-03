@@ -19,12 +19,14 @@
 			</div>
 			<div id="updateEs">
 				<?php  
-					
+					$updateES=new requestEstudents;
+					$updateES->update($con);
 				?>
 			</div>
 			<div id="deleteEs">
 				<?php  
-					
+					$deleteES=new requestEstudents;
+					$deleteES->delete($con);
 				?>
 			</div>
 			<div id="addEs">
@@ -33,19 +35,24 @@
 					$addES->add($con);
 				?>
 			</div>
-			<!--******************************-->
+			<!-------------------------------------->
 			<div id="viewT">
-				<?php  $viewT=new requestTeacher;
+				<?php  
+					$viewT=new requestTeacher;
 					$viewT->view($con);
-					?>
+				?>
 			</div>
 			<div id="updateT">
 				<?php  
-					?>
+					$updateT=new requestTeacher;
+					$updateT->update($con);
+				?>
 			</div>
 			<div id="deleteT">
 				<?php  
-					?>
+					$deleteT=new requestTeacher;
+					$deleteT->delete($con);
+				?>
 			</div>
 			<div id="addT">
 				<?php  
@@ -53,19 +60,24 @@
 					$addT->add($con);
 				?>
 			</div>
-			<!--******************************-->
+			<!-------------------------------------->
 			<div id="viewB">
-				<?php  $viewB=new requestBusiness;
+				<?php  
+					$viewB=new requestBusiness;
 					$viewB->view($con);
-					?>
+				?>
 			</div>
 			<div id="updateB">
 				<?php  
-					?>
+					$updateB=new requestBusiness;
+					$updateB->update($con);
+				?>
 			</div>
 			<div id="deleteB">
-				<?php 
-					?>
+				<?php  
+					$deleteB=new requestBusiness;
+					$deleteB->delete($con);
+				?>
 			</div>
 			<div id="addB">
 				<?php  
@@ -73,7 +85,7 @@
 					$addB->add($con);
 				?>
 			</div>
-			<!--******************************-->
+			<!------------------------------------>
 			<div id="viewC">
 				<?php  
 					$viewC=new requestClass;

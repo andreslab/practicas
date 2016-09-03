@@ -24,8 +24,60 @@
 		}
 		echo "</table>";
 		}
-		function update(){}
-		function delete(){}
+		function update($con){
+		$query="SELECT * FROM docente_tutor";
+		$statement= $con->prepare($query);
+		$statement->execute(array());
+		$result = $statement->fetchAll();
+		echo "<table>";
+		foreach ($result as $key) {
+			echo "<tr>";
+				echo "<td>";
+					echo "<img src='img/icon/edit.svg'>";
+				echo "</td>";
+				echo "<td>";
+					echo $key['cod_doc'];
+				echo "</td>";
+				echo "<td>";
+					echo $key['nom_doc'];
+				echo "</td>";
+				echo "<td>";
+					echo $key['ape_doc'];
+				echo "</td>";
+				echo "<td>";
+					echo $key['email_doc'];
+				echo "</td>";
+			echo "</tr>";
+		}
+		echo "</table>";
+		}
+		function delete($con){
+		$query="SELECT * FROM docente_tutor";
+		$statement= $con->prepare($query);
+		$statement->execute(array());
+		$result = $statement->fetchAll();
+		echo "<table>";
+		foreach ($result as $key) {
+			echo "<tr>";
+				echo "<td>";
+					echo "<img src='img/icon/delete.svg'>";
+				echo "</td>";
+				echo "<td>";
+					echo $key['cod_doc'];
+				echo "</td>";
+				echo "<td>";
+					echo $key['nom_doc'];
+				echo "</td>";
+				echo "<td>";
+					echo $key['ape_doc'];
+				echo "</td>";
+				echo "<td>";
+					echo $key['email_doc'];
+				echo "</td>";
+			echo "</tr>";
+		}
+		echo "</table>";
+		}
 		function add(){
 			echo"<form action='' method='POST' >";
 			echo "<label for='nom_doc'>Nombre</label>";

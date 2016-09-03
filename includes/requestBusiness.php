@@ -36,8 +36,84 @@
 		}
 		echo "</table>";
 		}
-		function update(){}
-		function delete(){}
+		function update($con){
+			$query="SELECT * FROM empresa";
+			$statementUpdate= $con->prepare($query);
+			$statementUpdate->execute(array());
+			$result = $statementUpdate->fetchAll();
+			echo "<table>";
+			foreach ($result as $key) {
+				echo "<tr>";
+					echo "<td>";
+						echo "<img src='img/icon/edit.svg'>";
+					echo "</td>";
+					echo "<td>";
+						echo $key['cod_empresa'];
+					echo "</td>";
+					echo "<td>";
+						echo $key['nom_empresa'];
+					echo "</td>";
+					echo "<td>";
+						echo $key['repre_empresa'];
+					echo "</td>";
+					echo "<td>";
+						echo $key['cedula_repre'];
+					echo "</td>";
+					echo "<td>";
+						echo $key['tipo_empre'];
+					echo "</td>";
+					echo "<td>";
+						echo $key['direccion_empre'];
+					echo "</td>";
+					echo "<td>";
+						echo $key['tele_empre'];
+					echo "</td>";
+					echo "<td>";
+						echo $key['sitio_web'];
+					echo "</td>";
+				echo "</tr>";
+			}
+			echo "</table>";
+		}
+		function delete($con){
+			$query="SELECT * FROM empresa";
+			$statementDelete= $con->prepare($query);
+			$statementDelete->execute(array());
+			$result = $statementDelete->fetchAll();
+			echo "<table>";
+			foreach ($result as $key) {
+				echo "<tr>";
+					echo "<td>";
+						echo "<img src='img/icon/delete.svg'>";
+					echo "</td>";
+					echo "<td>";
+						echo $key['cod_empresa'];
+					echo "</td>";
+					echo "<td>";
+						echo $key['nom_empresa'];
+					echo "</td>";
+					echo "<td>";
+						echo $key['repre_empresa'];
+					echo "</td>";
+					echo "<td>";
+						echo $key['cedula_repre'];
+					echo "</td>";
+					echo "<td>";
+						echo $key['tipo_empre'];
+					echo "</td>";
+					echo "<td>";
+						echo $key['direccion_empre'];
+					echo "</td>";
+					echo "<td>";
+						echo $key['tele_empre'];
+					echo "</td>";
+					echo "<td>";
+						echo $key['sitio_web'];
+					echo "</td>";
+				echo "</tr>";
+			}
+			echo "</table>";
+		}
 		function add(){
 			echo"<form action='' method='POST'>";
 			echo "<label for='nom_empresa'>Nombre</label>";

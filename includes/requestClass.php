@@ -24,8 +24,8 @@
 		}
 		echo "</table>";
 		}
-		function update(){}
-		function delete(){}
+		function update($con){}
+		function delete($con){}
 		function add(){}
 	}
  ?>

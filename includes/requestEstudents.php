@@ -24,8 +24,60 @@
 		}
 		echo "</table>";
 		}
-		function update(){}
-		function delete(){}
+		function update($con){
+		$query="SELECT * FROM estudiante";
+		$statement= $con->prepare($query);
+		$statement->execute(array());
+		$result = $statement->fetchAll();
+		echo "<table>";
+		foreach ($result as $key) {
+			echo "<tr>";
+				echo "<td>";
+					echo "<img src='img/icon/edit.svg'>";
+				echo "</td>";
+				echo "<td>";
+					echo $key['cod_estu'];
+				echo "</td>";
+				echo "<td>";
+					echo $key['nombre_estu'];
+				echo "</td>";
+				echo "<td>";
+					echo $key['apellido_estu'];
+				echo "</td>";
+				echo "<td>";
+					echo $key['cedula'];
+				echo "</td>";
+			echo "</tr>";
+		}
+		echo "</table>";
+		}
+		function delete($con){
+		$query="SELECT * FROM estudiante";
+		$statement= $con->prepare($query);
+		$statement->execute(array());
+		$result = $statement->fetchAll();
+		echo "<table>";
+		foreach ($result as $key) {
+			echo "<tr>";
+				echo "<td>";
+					echo "<img src='img/icon/delete.svg'>";
+				echo "</td>";
+				echo "<td>";
+					echo $key['cod_estu'];
+				echo "</td>";
+				echo "<td>";
+					echo $key['nombre_estu'];
+				echo "</td>";
+				echo "<td>";
+					echo $key['apellido_estu'];
+				echo "</td>";
+				echo "<td>";
+					echo $key['cedula'];
+				echo "</td>";
+			echo "</tr>";
+		}
+		echo "</table>";
+		}
 		function add(){
 			echo"<form action='' method='POST'>";
  	

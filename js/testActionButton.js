@@ -25,7 +25,7 @@ function execute0_0(){
 	document.getElementById("addC").style.visibility="hidden";
 	}
 function execute0_1(){
-	alert("01");
+	
 	document.getElementById("updateEs").style.visibility="visible";
 
 	document.getElementById("viewEs").style.visibility="hidden";
@@ -48,7 +48,7 @@ function execute0_1(){
 	document.getElementById("addC").style.visibility="hidden";
 }
 function execute0_2(){
-	alert("02");
+	
 	document.getElementById("deleteEs").style.visibility="visible";
 
 	document.getElementById("viewEs").style.visibility="hidden";
@@ -116,7 +116,7 @@ function execute1_0(){
 	document.getElementById("addC").style.visibility="hidden";
 }
 function execute1_1(){
-	alert("11");
+	
 	document.getElementById("updateT").style.visibility="visible";
 
 	document.getElementById("viewEs").style.visibility="hidden";
@@ -139,16 +139,16 @@ function execute1_1(){
 	document.getElementById("addC").style.visibility="hidden";
 }
 function execute1_2(){
-	alert("12");
+	
 	document.getElementById("deleteT").style.visibility="visible";
 
 	document.getElementById("viewEs").style.visibility="hidden";
 	document.getElementById("updateEs").style.visibility="hidden";
+	document.getElementById("deleteEs").style.visibility="hidden";
 	document.getElementById("addEs").style.visibility="hidden";
 
 	document.getElementById("viewT").style.visibility="hidden";
 	document.getElementById("updateT").style.visibility="hidden";
-	document.getElementById("deleteT").style.visibility="hidden";
 	document.getElementById("addT").style.visibility="hidden";
 
 	document.getElementById("viewB").style.visibility="hidden";
@@ -207,7 +207,7 @@ function execute2_0(){
 	document.getElementById("addC").style.visibility="hidden";
 }
 function execute2_1(){
-	alert("21");
+	
 	document.getElementById("updateB").style.visibility="visible";
 
 	document.getElementById("viewEs").style.visibility="hidden";
@@ -230,7 +230,7 @@ function execute2_1(){
 	document.getElementById("addC").style.visibility="hidden";
 }
 function execute2_2(){
-	alert("22");
+	
 	document.getElementById("deleteB").style.visibility="visible";
 
 	document.getElementById("viewEs").style.visibility="hidden";
@@ -276,6 +276,7 @@ function execute2_3(){
 }
 
 function execute3_0(){
+	alert("30");
 	document.getElementById("viewC").style.visibility="visible";
 
 	document.getElementById("viewEs").style.visibility="hidden";
