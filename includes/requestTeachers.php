@@ -26,7 +26,23 @@
 		}
 		function update(){}
 		function delete(){}
-		function add(){}
+		function add(){
+			echo"<form action='' method='POST' >";
+			echo "<label for='nom_doc'>Nombre</label>";
+			echo"<input id='nom_doc' type='text' name='nom_doc' required>";
+
+			echo"<br>";
+			echo "<label for='ape_doc'>Apellido</label>";
+			echo"<input id='ape_doc' type='text' name='ape_doc' required>";
+
+			echo"<br>";
+			echo "<label for='email_doc'>Email</label>";
+			echo"<input id='email_doc' type='text' name='email_doc' required>";
+
+			echo"<br>";
+			echo"<input type='submit' required>";
+			echo"</form>";
+		}
 	}
  ?>
  

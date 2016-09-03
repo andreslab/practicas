@@ -38,7 +38,36 @@
 		}
 		function update(){}
 		function delete(){}
-		function add(){}
+		function add(){
+			echo"<form action='' method='POST'>";
+			echo "<label for='nom_empresa'>Nombre</label>";
+			echo "<input id='nom_empresa' type='text' name='nom_empresa'  required>";
+
+			echo"<br>";
+			echo "<label for='repre_empresa'>Representante</label>";
+			echo "<input id='repre_empresa' type='text' name='repre_empresa'  required>";
+
+			echo"<br>";
+			echo "<label for='cedula_repre'>Cédula del representante</label>";
+			echo "<input id='cedula_repre' type='text' name='cedula_repre'  required>";
+
+			echo"<br>";
+			echo "<label for='tipo_empre'>Tipo de Empresa</label>";
+			echo "<input id='tipo_empre' type='text' name='tipo_empre'  required>";
+
+			echo"<br>";
+			echo "<label for='tele_empre'>Teléfono</label>";
+			echo "<input id='tele_empre' type='text' name='tele_empre'  required>";
+
+			echo"<br>";
+			echo "<label for='sitio_web'>Sitio Web</label>";
+			echo "<input id='sitio_web' type='text' name='sitio_web'  required>";
+
+			echo"<br>";
+			echo "<input type='submit' value='submit' id='enviar'>";
+
+			echo"</form>";
+		}
 	}
  ?>
  

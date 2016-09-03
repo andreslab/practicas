@@ -29,7 +29,8 @@
 			</div>
 			<div id="addEs">
 				<?php  
-					
+					$addES=new requestEstudents;
+					$addES->add($con);
 				?>
 			</div>
 			<!--******************************-->
@@ -48,7 +49,9 @@
 			</div>
 			<div id="addT">
 				<?php  
-					?>
+					$addT=new requestTeacher;
+					$addT->add($con);
+				?>
 			</div>
 			<!--******************************-->
 			<div id="viewB">
@@ -66,13 +69,16 @@
 			</div>
 			<div id="addB">
 				<?php  
-					?>
+					$addB=new requestBusiness;
+					$addB->add($con);
+				?>
 			</div>
 			<!--******************************-->
 			<div id="viewC">
-				<?php  $viewC=new requestClass;
+				<?php  
+					$viewC=new requestClass;
 					$viewC->view($con);
-					?>
+				?>
 			</div>
 			<div id="updateC">
 				<?php  
@@ -84,7 +90,8 @@
 			</div>
 			<div id="addC">
 				<?php  
-					?>
+					
+				?>
 			</div>
 			<script type="text/javascript" src="js/contentAction.js"></script>
 	</section>
