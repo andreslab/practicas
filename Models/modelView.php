@@ -1,9 +1,7 @@
 <?php 
-	require("Models/modelStructure.php");
-	require("Resources/database.php");
-	require("Resources/requestList.php");
+	require("Models/utils.php");
 
-	class modelView implements modelStructure{
+	class modelView implements modelStructure_view{
 
 		private $resp;
 
@@ -22,6 +20,8 @@
 		public function facultadModel(){
 			return $this->execute(FACULTAD_VIEW);}
 		public function materiaModel(){
+			return $this->execute(MATERIA_VIEW);}
+		public function semestreModel(){
 			return $this->execute(MATERIA_VIEW);}
 		public function usuarioModel(){
 			return $this->execute(USUARIO_VIEW);}

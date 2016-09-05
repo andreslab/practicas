@@ -20,15 +20,13 @@
 				//return $this->con;
 			}
 		} 
-		public function updateRequest(){
-			$response=$this->con->prepare($sql);
+		public function updateRequest($sql){
+			$response=$this->con->query($sql);
 			return $response;
 		}
 		public function addRequest($sql){
 			$response=$this->con->prepare($sql);
 			return $response;
-			/*$response->bind_param($typeData, $data1);
-			$response->execute();*/
 		}
 		public function deleteRequest($sql){
 			$response=$this->con->query($sql);

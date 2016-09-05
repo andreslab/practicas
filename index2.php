@@ -5,15 +5,13 @@
 </head>
 <body>
 <?php 
-	include("Models/modelView.php");
+	include("Models/modelUpdate.php");
 
-	$db = new modelView();
-	$t= $db->carreraModel();
-	echo "<pre>";
-		while($e = $t->fetch_row()){
-			echo $e[1];
-		}
-	echo "</pre>";
+	$db = new modelUpdate();
+	$v=array(5,"geometria");
+	$db->carreraModel($v);
+	
+	
 
 
  ?>
