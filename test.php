@@ -5,15 +5,11 @@
 </head>
 <body>
 <?php 
-	include("Models/modelUpdate.php");
-
+	//include("Models/modelUpdate.php");
+	include("Controllers/controllerUpdate.php");
 	$db = new modelUpdate();
-	$v=array(5,"geometria");
+	$v=array(9,"geometria");
 	$db->carreraModel($v);
-	
-	
-
-
  ?>
 </body>
 </html>
