@@ -2,7 +2,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/styleLog.css">
 	<section id="logBox">
-		<form action="sessionOpen.php" method="POST">
+		<form action="session.php" method="POST">
 			<div class="inputContent">
 				<img class="icon" src="img/icon/user.svg">
 				<input class="inputEdit" type="text" name="inputName" maxlength="30">

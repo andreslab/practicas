@@ -18,5 +18,7 @@
  </form>
  	<button type="button">Borrar</button>
  	<button type="button">Cancelar</button>
+
+ 	<?php include("includes/toolBar.php"); ?>
 </body>
 </html>
