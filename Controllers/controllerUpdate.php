@@ -1,7 +1,7 @@
 <?php 
 	require("Controllers/utils.php");
 
-	class controllerUpdateimplements controllerStructure{
+	class controllerUpdate implements controllerStructure{
 		public function carreraController(){}
 		public function docenteController(){}
 		public function empresaController(){} 

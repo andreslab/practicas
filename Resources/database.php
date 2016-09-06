@@ -38,6 +38,7 @@
 
 		public function __destruct(){
 			$this->con->close();
+			echo "Conexión destruida";
 		}
 	}
 
