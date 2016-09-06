@@ -1,5 +1,5 @@
 <?php 
-	require("Controllers/utils.php");
+	require("utils.php");
 	
 	class controllerDelete implements controllerStructure{
 		public function carreraController(){}

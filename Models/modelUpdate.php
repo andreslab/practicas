@@ -1,5 +1,4 @@
 <?php 
-	require("Models/utils.php");
 
 	class modelUpdate implements modelStructure_update{
 

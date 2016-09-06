@@ -6,7 +6,7 @@
 				"Docentes",
 				"Facultad",
 				"Materias",
-				"Semetres");
+				"Semestres");
 
 	echo "<ul>";
 		for ($i=0; $i < count($topic); $i++) { 

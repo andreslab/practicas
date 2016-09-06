@@ -1,5 +1,5 @@
 <?php 
-	require("Controllers/utils.php");
+	require("utils.php");
 
 	class controllerUpdate implements controllerStructure{
 		public function carreraController(){}

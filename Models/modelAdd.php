@@ -1,5 +1,4 @@
 <?php 
-	require("Models/utils.php");
 
 	class modelAdd implements modelStructure_add{
 

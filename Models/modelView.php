@@ -1,6 +1,4 @@
 <?php 
-	require("Models/utils.php");
-
 	class modelView implements modelStructure_view{
 
 		private $resp;

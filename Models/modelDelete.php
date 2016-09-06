@@ -1,5 +1,4 @@
 <?php 
-	require("Models/utils.php");
 
 	class modelDelete implements modelStructure_delete{
 
