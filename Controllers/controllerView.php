@@ -3,7 +3,7 @@
 	require("utils.php");
 
 
-	$op_= $_GET['view'];
+	$op_= $_GET['task'];
 
 	class controllerView implements controllerStructure{
 
@@ -25,6 +25,7 @@
 
 			$data=$model->carreraModel();
 			$view->showView($data);
+			$global=1;
 		}
 		public function docenteController(){
 			$model=new modelView();
@@ -32,6 +33,7 @@
 
 			$data=$model->docenteModel();
 			$view->showView($data);
+			$global=2;
 		}
 		public function empresaController(){
 			$model=new modelView();
@@ -39,6 +41,7 @@
 
 			$data=$model->empresaModel();
 			$view->showView($data);
+			$global=3;
 		} 
 		public function estudianteController(){
 			$model=new modelView();
@@ -46,6 +49,7 @@
 
 			$data=$model->estudianteModel();
 			$view->showView($data);
+			$global=4;
 		}
 		public function facultadController(){
 			$model=new modelView();
@@ -53,6 +57,7 @@
 
 			$data=$model->facultadModel();
 			$view->showView($data);
+			$global=5;
 		}
 		public function materiaController(){
 			$model=new modelView();
@@ -60,6 +65,7 @@
 
 			$data=$model->materiaModel();
 			$view->showView($data);
+			$global=6;
 		}
 		public function semestreController(){
 			$model=new modelView();
@@ -67,6 +73,7 @@
 
 			$data=$model->semestreModel();
 			$view->showView($data);
+			$global=7;
 		}
 		public function usuarioController(){
 			echo "funciona";

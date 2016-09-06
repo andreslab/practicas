@@ -1,6 +1,8 @@
 <?php 
 	require("utils.php");
 
+	echo $_GET['task'];
+
 	class controllerUpdate implements controllerStructure{
 		public function carreraController(){}
 		public function docenteController(){}

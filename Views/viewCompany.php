@@ -130,6 +130,9 @@
 			while($key = $result->fetch_row()){
 				echo "<tr>";
 					echo "<td>";
+						echo "<input type='checkbox' id='_".$key[0]."'>";
+					echo "</td>";
+					echo "<td>";
 						echo $key[0];
 					echo "</td>";
 					echo "<td>";

@@ -10,39 +10,8 @@
 		</section>
 		<section id="view"><br><br><br><br><br><br>
 			<?php include("includes/toolBar.php"); ?>
-			<br><br><br><br><br><br>
-			<div id="show">
-			<table>
-				<tr>
-				  <td><strong>Curso</strong></td>
-				  <td><strong>Horas</strong></td>
-				  <td><strong>Horario</strong></td>
-				</tr>
-				 
-				<tr>
-				  <td>CSS</td>
-				  <td>20</td>
-				  <td>16:00 - 20:00</td>
-				</tr>
-				 
-				<tr>
-				  <td>HTML</td>
-				  <td>20</td>
-				  <td>16:00 - 20:00</td>
-				</tr>
-				 <?php for ($i=0; $i < 50; $i++) { 
-				 	# code...
-				  ?>
-				<tr>
-				  <td>Dreamweaver</td>
-				  <td>60</td>
-				  <td>16:00 - 20:00</td>
-				</tr>
-
-				<?php }?>
-
-				</table>
-			</div>
+			<br><br><br>
+			<div id="show"></div>
 		</section>
 </body>
 </html>

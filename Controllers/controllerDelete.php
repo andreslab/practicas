@@ -1,5 +1,7 @@
 <?php 
 	require("utils.php");
+
+	echo $_GET['task'];
 	
 	class controllerDelete implements controllerStructure{
 		public function carreraController(){}

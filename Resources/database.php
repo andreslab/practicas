@@ -11,12 +11,11 @@
 				PASS,
 				DB);
 			if(mysqli_connect_errno()){
-				echo "Fallo la conexión";
+				//echo "Fallo la conexión";
 				exit();
 			}
 			else{
-				echo "Conexión exitosa";
-				//return $this->con;
+				//echo "Conexión exitosa";
 			}
 		} 
 		public function updateRequest($sql){
@@ -37,7 +36,7 @@
 
 		public function __destruct(){
 			$this->con->close();
-			echo "Conexión destruida";
+			//echo "Conexión destruida";
 		}
 	}
 

@@ -13,6 +13,7 @@
 */
 
  ?>
+ <meta charset="utf-8">
  <form>
  	<input type="text" name="c" value="jaime">
  </form>
@@ -24,6 +25,15 @@
  	<?php include("includes/toolBar.php"); ?>
 
  	<?php 
+
+
+ 	
+	echo "<input type='checkbox' id='_".$key[0]."'>";
+
+	echo "<form>";
+						echo "<input type='checkbox' id='_'>";
+	echo "</form>";
+				
 
  	echo "<div>";
 		echo "<img onclick=alert('borrar') src='img/icon/delete.svg'>";

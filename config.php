@@ -1,4 +1,6 @@
 <?php 
+$global=0;
+
 define("SERVER","localhost");
 define("USER","root");
 define("PASS","");
