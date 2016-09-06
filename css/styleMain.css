@@ -10,26 +10,32 @@ html, body{
 
 #view{
 	display: inline-block;
-	width: 75%;
-	height: 100%;
-	background-color:white; 
+	width: 82%;
+	height: 92%;
+	position: absolute;
 	vertical-align: top;
 	color: darkgray;
 	padding-top: 0px;
 	padding-bottom: 30px;
-	padding-left: 20px;
-	overflow-y:scroll; 
+	margin-bottom: 30px;
 }
 #menu{
+	overflow: hidden;
 	width: 15%;
 	height: 100%;
 	padding: 5px;
 	background-color:rgb(100,100,100);
 	display: inline-block;
-	color: lightgray;
+	color: rgb(150,150,150);
 	padding-left: 10px;
 
 }
+#show{
+	margin-left: 50px;
+	overflow-y:scroll; 
+	height: 65%;
+}
+
 li{
 	cursor: pointer;
 }
