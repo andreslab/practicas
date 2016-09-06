@@ -16,16 +16,16 @@
 		public function showDelete($result){
 			echo "<table>";
 			echo"<br><br><br><br>";
-			foreach ($result as $key) {
+			while($key = $result->fetch_row()){
 				echo "<tr>";
 					echo "<td>";
 						echo "<img src='img/icon/delete.svg'>";
 					echo "</td>";
 					echo "<td>";
-						echo $key['codigo_carrera'];
+						echo $key[0];
 					echo "</td>";
 					echo "<td>";
-						echo $key['nombre_carrera'];
+						echo $key[1];
 					echo "</td>";
 				echo "</tr>";
 			}
@@ -50,13 +50,13 @@
 		public function showView($result){
 			echo "<table>";
 			echo"<br><br><br><br>";
-			foreach ($result as $key) {
+			while($key = $result->fetch_row()){
 				echo "<tr>";
 					echo "<td>";
-						echo $key['codigo_carrera'];
+						echo $key[0];
 					echo "</td>";
 					echo "<td>";
-						echo $key['nombre_carrera'];
+						echo $key[1];
 					echo "</td>";
 				echo "</tr>";
 			}

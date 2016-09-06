@@ -37,25 +37,25 @@
 		public function showDelete($result){
 			echo "<table>";
 			echo"<br><br><br><br>";
-			foreach ($result as $key) {
+			while($key = $result->fetch_row()){
 				echo "<tr>";
 					echo "<td>";
-						echo $key['codigo_facultad'];
+						echo $key[0];
 					echo "</td>";
 					echo "<td>";
-						echo $key['nombre_facultad'];
+						echo $key[1];
 					echo "</td>";
 					echo "<td>";
-						echo $key['direccion_facultad'];
+						echo $key[2];
 					echo "</td>";
 					echo "<td>";
-						echo $key['telefono_facultad'];
+						echo $key[3];
 					echo "</td>";
 					echo "<td>";
-						echo $key['email_facultad'];
+						echo $key[4];
 					echo "</td>";
 					echo "<td>";
-						echo $key['web_facultad'];
+						echo $key[5];
 					echo "</td>";
 				echo "</tr>";
 			}
@@ -101,25 +101,25 @@
 		public function showView($result){
 			echo "<table>";
 			echo"<br><br><br><br>";
-			foreach ($result as $key) {
+			while($key = $result->fetch_row()){
 				echo "<tr>";
 					echo "<td>";
-						echo $key['codigo_facultad'];
+						echo $key[0];
 					echo "</td>";
 					echo "<td>";
-						echo $key['nombre_facultad'];
+						echo $key[1];
 					echo "</td>";
 					echo "<td>";
-						echo $key['direccion_facultad'];
+						echo $key[2];
 					echo "</td>";
 					echo "<td>";
-						echo $key['telefono_facultad'];
+						echo $key[3];
 					echo "</td>";
 					echo "<td>";
-						echo $key['email_facultad'];
+						echo $key[4];
 					echo "</td>";
 					echo "<td>";
-						echo $key['web_facultad'];
+						echo $key[5];
 					echo "</td>";
 				echo "</tr>";
 			}

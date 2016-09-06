@@ -8,23 +8,23 @@
 		}
 
 		public function carreraModel(){
-			return $this->execute(CARRERA_VIEW);}
+			return $this->exec(CARRERA_VIEW);}
 		public function docenteModel(){
-			return $this->execute(DOCENTE_TUTOR_VIEW);}
+			return $this->exec(DOCENTE_TUTOR_VIEW);}
 		public function empresaModel(){
-			return $this->execute(EMPRESA_VIEW);}
+			return $this->exec(EMPRESA_VIEW);}
 		public function estudianteModel(){
-			return $this->execute(ESTUDIANTE_VIEW);}
+			return $this->exec(ESTUDIANTE_VIEW);}
 		public function facultadModel(){
-			return $this->execute(FACULTAD_VIEW);}
+			return $this->exec(FACULTAD_VIEW);}
 		public function materiaModel(){
-			return $this->execute(MATERIA_VIEW);}
+			return $this->exec(MATERIA_VIEW);}
 		public function semestreModel(){
-			return $this->execute(MATERIA_VIEW);}
+			return $this->exec(SEMESTRE_VIEW);}
 		public function usuarioModel(){
-			return $this->execute(USUARIO_VIEW);}
+			return $this->exec(USUARIO_VIEW);}
 
-		private function execute($sql){
+		private function exec($sql){
 			$response=$this->resp->viewRequest($sql);
 			return $response;
 		}

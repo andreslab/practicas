@@ -27,19 +27,19 @@
 		public function showDelete($result){
 			echo "<table>";
 			echo"<br><br><br><br>";
-			foreach ($result as $key) {
+			while($key = $result->fetch_row()){
 				echo "<tr>";
 					echo "<td>";
-						echo $key['codigo_docente'];
+						echo $key[0];
 					echo "</td>";
 					echo "<td>";
-						echo $key['nombre_docente'];
+						echo $key[1];
 					echo "</td>";
 					echo "<td>";
-						echo $key['apellido_docente'];
+						echo $key[2];
 					echo "</td>";
 					echo "<td>";
-						echo $key['email_docente'];
+						echo $key[3];
 					echo "</td>";
 				echo "</tr>";
 			}
@@ -75,19 +75,19 @@
 		public function showView($result){
 			echo "<table>";
 			echo"<br><br><br><br>";
-			foreach ($result as $key) {
+			while($key = $result->fetch_row()){
 				echo "<tr>";
 					echo "<td>";
-						echo $key['codigo_docente'];
+						echo $key[0];
 					echo "</td>";
 					echo "<td>";
-						echo $key['nombre_docente'];
+						echo $key[1];
 					echo "</td>";
 					echo "<td>";
-						echo $key['apellido_docente'];
+						echo $key[2];
 					echo "</td>";
 					echo "<td>";
-						echo $key['email_docente'];
+						echo $key[3];
 					echo "</td>";
 				echo "</tr>";
 			}

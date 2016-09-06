@@ -1,5 +1,7 @@
 <?php 
+	echo "<meta charset='utf-8'>";
 	require("utils.php");
+
 
 	$op_= $_GET['view'];
 
@@ -18,31 +20,56 @@
 		private function inicio(){}
 
 		public function carreraController(){
-			echo "carrera";
 			$model=new modelView();
+			$view= new viewCareer();
+
 			$data=$model->carreraModel();
-			
+			$view->showView($data);
 		}
 		public function docenteController(){
-			echo "docente";
+			$model=new modelView();
+			$view= new viewTeacher();
+
+			$data=$model->docenteModel();
+			$view->showView($data);
 		}
 		public function empresaController(){
-			echo "empresa";
+			$model=new modelView();
+			$view= new viewCompany();
+
+			$data=$model->empresaModel();
+			$view->showView($data);
 		} 
 		public function estudianteController(){
-			echo "estudiante";
+			$model=new modelView();
+			$view= new viewEstudent();
+
+			$data=$model->estudianteModel();
+			$view->showView($data);
 		}
 		public function facultadController(){
-			echo "facultad";
+			$model=new modelView();
+			$view= new viewFaculty();
+
+			$data=$model->facultadModel();
+			$view->showView($data);
 		}
 		public function materiaController(){
-			echo "materia";
+			$model=new modelView();
+			$view= new viewClass();
+
+			$data=$model->materiaModel();
+			$view->showView($data);
 		}
 		public function semestreController(){
-			echo "semestre";
+			$model=new modelView();
+			$view= new viewSemester();
+
+			$data=$model->semestreModel();
+			$view->showView($data);
 		}
 		public function usuarioController(){
-			echo "usuario";
+			echo "funciona";
 		}
 		
 		public function select($op){
