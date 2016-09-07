@@ -68,7 +68,10 @@ function task(file){
 			if(long==0){
 				alert("Seleccione un elemento");
 			}else{
-				callTaskDelete(file, op, arrayId);
+				var r = confirm("Seguro de eliminar los elementos");
+				if(r ==true){
+					callTaskDelete(file, op, arrayId);
+				}
 			}
 		break;
 		case "Add":

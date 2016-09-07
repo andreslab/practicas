@@ -57,12 +57,6 @@
 			$response->execute();
 		}
 
-		public function estadoModel($typeData, $arrayData){
-			$position =$this->autoPosition(ESTADO_VIEW);
-			$response=$this->execute(ESTADO_ADD);
-			$response->bind_param($typeData, $position, $arrayData[0]);
-			$response->execute();
-		}
 
 		private function execute($sql){
 			$response=$this->resp->updateRequest($sql);

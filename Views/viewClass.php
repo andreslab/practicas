@@ -2,8 +2,13 @@
 
 	class viewClass implements viewStructure{
 		public function showAdd(){
-			echo"<form action='controllerAdd.php' method='POST'>";
+			echo"<form action='Controllers/controllerSaveClass.php' method='POST'>";
 				echo"<br><br><br><br>";
+
+				echo "<label for='action'>Acción</label>";
+				echo"<br>";
+				echo "<input id='action' type='text' name='action' value='INGRESO' readonly>";
+				echo"<br><br>";
 
 				echo "<label for='nombre_materia'>Nombre</label>";
 				echo"<br>";
@@ -50,26 +55,34 @@
  			echo"<button type='button'>Cancelar</button>";
 		}
 		public function showUpdate($arrayData){
-			echo"<form action='controllerUpdate.php' method='POST'>";
+			echo"<form action='Controllers/controllerSaveClass.php' method='POST'>";
 				echo"<br><br><br><br>";
+
+				echo "<label for='action'>Acción</label>";
+				echo"<br>";
+				echo "<input id='action' type='text' name='action' value='ACTUALIZAR' readonly>";
+				echo"<br><br>";
+
+				echo "<input type='text' id='privado' name='key' value='".$arrayData[0]."' readonly>";
+				echo"<br>";
 
 				echo "<label for='nombre_materia'>Nombre</label>";
 				echo"<br>";
-				echo "<input id='nombre_materia' type='text' name='nombre_materia' value=".$arrayData[0]." required>";
+				echo "<input id='nombre_materia' type='text' name='nombre_materia' value=".$arrayData[1]." required>";
 
 				echo"<br><br>";
 				echo "<label for='curso_materia'>Curso</label>";
 				echo"<br>";
-				echo "<input id='curso_materia' type='text' name='curso_materia' value=".$arrayData[1]." required>";
+				echo "<input id='curso_materia' type='text' name='curso_materia' value=".$arrayData[2]." required>";
 
 				echo"<br><br>";
 				echo "<label for='hora_materia'>Hora</label>";
 				echo"<br>";
-				echo "<input id='hora_materia' type='text' name='hora_materia' value=".$arrayData[2]." required>";
+				echo "<input id='hora_materia' type='text' name='hora_materia' value=".$arrayData[3]." required>";
 
 				echo"<br><br>";
 				echo "<input type='submit' value='ACTUALIZAR' id='enviar'>";
-
+				echo "<input type='reset'>";
 			echo"</form>";
 		}
 		public function showView($result){

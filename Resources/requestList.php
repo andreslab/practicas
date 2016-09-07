@@ -8,8 +8,15 @@ define("FACULTAD_VIEW","SELECT * FROM facultad");
 define("MATERIA_VIEW","SELECT * FROM materia");
 define("SEMESTRE_VIEW","SELECT * FROM semestre");
 define("USUARIO_VIEW","SELECT * FROM usuario");
-define("ESTADO_VIEW","SELECT * FROM estado");
 
+define("CARRERA_INFO","SELECT * FROM carrera WHERE codigo_carrera=");
+define("DOCENTE_TUTOR_INFO","SELECT * FROM docente_tutor WHERE codigo_docente=");
+define("EMPRESA_INFO","SELECT * FROM empresa WHERE codigo_empresa=");
+define("ESTUDIANTE_INFO","SELECT * FROM estudiante WHERE codigo_estudiante=");
+define("FACULTAD_INFO","SELECT * FROM facultad WHERE codigo_facultad=");
+define("MATERIA_INFO","SELECT * FROM materia WHERE codigo_materia=");
+define("SEMESTRE_INFO","SELECT * FROM semestre WHERE codigo_semestre=");
+define("USUARIO_INFO","SELECT * FROM usuario WHERE codigo_usuario=");
 
 //Añadir registros a las tablas
 define("CARRERA_ADD","INSERT INTO carrera VALUES (?,?)");
@@ -21,7 +28,7 @@ define("MATERIA_ADD","INSERT INTO materia VALUES (?,?,?,?)");
 define("SEMESTRE_ADD","INSERT INTO semestre VALUES (?,?,?,?)");
 define("USUARIO_ADD","INSERT INTO usuario VALUES (?,?,?)");
 
-define("ESTADO_ADD","INSERT INTO estado VALUES (?,?)");
+
 
 
 
