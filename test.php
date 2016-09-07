@@ -26,6 +26,24 @@
 
  	<?php 
 
+ 	$frutas = array("roja","manzana","guineo","melon");
+ 	echo serialize($frutas);
+
+ 	echo "<table>";
+ 	echo "<tr>";
+					
+			echo "<td>";
+						echo "jaime";
+			echo "</td>";
+					echo "<td>";
+						echo "<input type='checkbox' name='vehicle1' value='Bike'/>";
+					echo "</td>";
+					echo "<td>";
+						echo "saluda";
+					echo "</td>";
+				echo "</tr>";
+ 	echo "</table>";
+
 
  	
 	echo "<input type='checkbox' id='_".$key[0]."'>";

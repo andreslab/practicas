@@ -39,7 +39,7 @@ html, body{
 li{
 	cursor: pointer;
 }
-input{
+input[type=text]{
 
 	width: 150px;
 	appearance: none;
@@ -49,12 +49,12 @@ input{
     background-color: white;
     border-top-style: none;
     border-right-style: none;
-    border-left-style: none; 
+    border-left-style: none;
     border-bottom-color: rgb(190,190,190);
     font-size: 20px;
 }
 
-input:focus{
+input[type=text]:focus{
 	
 	outline: 0px;
 	animation-duration: .5s;
@@ -88,6 +88,10 @@ ul{
 
 .subitem{
 	list-style: none;
+}
+
+#total{
+	visibility: hidden;
 }
 
 @keyframes focusInput {

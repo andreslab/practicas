@@ -1,7 +1,16 @@
 <?php 
 	require("utils.php");
 
-	echo $_GET['task'];
+	//echo $_POST['arrayId'];
+	echo $_GET['option'];
+	echo "<br>";
+
+	echo $_GET['arrayId'];
+	
+	//var_dump($frutas);
+	///echo $frutas;
+
+	
 
 	class controllerUpdate implements controllerStructure{
 		public function carreraController(){}

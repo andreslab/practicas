@@ -8,7 +8,7 @@ define("FACULTAD_VIEW","SELECT * FROM facultad");
 define("MATERIA_VIEW","SELECT * FROM materia");
 define("SEMESTRE_VIEW","SELECT * FROM semestre");
 define("USUARIO_VIEW","SELECT * FROM usuario");
-
+define("ESTADO_VIEW","SELECT * FROM estado");
 
 
 //Añadir registros a las tablas
@@ -20,6 +20,8 @@ define("FACULTAD_ADD","INSERT INTO facultad VALUES (?,?,?,?,?,?)");
 define("MATERIA_ADD","INSERT INTO materia VALUES (?,?,?,?)");
 define("SEMESTRE_ADD","INSERT INTO semestre VALUES (?,?,?,?)");
 define("USUARIO_ADD","INSERT INTO usuario VALUES (?,?,?)");
+
+define("ESTADO_ADD","INSERT INTO estado VALUES (?,?)");
 
 
 

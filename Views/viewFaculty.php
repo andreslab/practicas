@@ -2,7 +2,7 @@
 
 	class viewFaculty implements viewStructure{
 		public function showAdd(){
-			echo"<form action='' method='POST'>";
+			echo"<form action='controllerAdd.php' method='POST'>";
 				echo"<br><br><br><br>";
 
 				echo "<label for='nombre_facultad'>Nombre</label>";
@@ -66,7 +66,7 @@
  			echo"<button type='button'>Cancelar</button>";
 		}
 		public function showUpdate($arrayData){
-			echo"<form action='' method='POST'>";
+			echo"<form action='controllerUpdate.php' method='POST'>";
 				echo"<br><br><br><br>";
 
 				echo "<label for='nombre_facultad'>Nombre</label>";
@@ -99,6 +99,7 @@
 			echo"</form>";
 		}
 		public function showView($result){
+			$count=0;
 			echo "<table>";
 			echo"<br><br><br><br>";
 			while($key = $result->fetch_row()){
@@ -125,8 +126,11 @@
 						echo $key[5];
 					echo "</td>";
 				echo "</tr>";
+				$count++;
 			}
 			echo "</table>";
+			echo "<div id='total'>".$count
+			."</div>";
 		}
 	}
  ?>

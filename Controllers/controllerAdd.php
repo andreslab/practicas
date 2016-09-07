@@ -3,6 +3,8 @@
 	
 
 	class controllerAdd implements controllerStructure{
+
+
 		public function carreraController(){
 			$view= new viewCareer();
 			$view->showAdd();
@@ -37,29 +39,29 @@
 
 	}
 
-	echo $global;
+	$option=$_GET['option'];
 
 	$local= new controllerAdd();
-	switch ($global) {
-		case 1:
+	switch ($option) {
+		case "Carreras":
 			$local->carreraController();
 			break;
-		case 2:
+		case "Empresas":
 			$local->empresaController();
 			break;
-		case 3:
+		case "Estudiantes":
 			$local->estudianteController();
 			break;
-		case 4:
+		case "Docentes":
 			$local->docenteController();
 			break;
-		case 5:
+		case "Facultad":
 			$local->facultadController();
 			break;
-		case 6:
+		case "Materias":
 			$local->materiaController();
 			break;
-		case 7:
+		case "Semestres":
 			$local->semestreController();
 			break;
 		default:

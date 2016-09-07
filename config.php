@@ -1,5 +1,5 @@
 <?php 
-$global=0;
+$global=7;
 
 define("SERVER","localhost");
 define("USER","root");

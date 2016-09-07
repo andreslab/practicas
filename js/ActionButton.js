@@ -1,8 +1,11 @@
-/*var button= document.getElementById('t1_1');
-alert(button.innerHTML);*/
+var op;
+var arrayId;
+var data;
+
 function Item(value){
 	var e =document.getElementById(value).innerHTML;
 	callData(e);
+	op=e;
 }
 
 function callData(e){
@@ -19,30 +22,51 @@ function callData(e){
 	}
 	link.open("GET","Controllers/controllerView.php?task="+e,true);
 	link.send();
-}	
+}
 
-var n;
+//peticion para saber el numero
+
+
+function check(){
+	var arrayident=new Array();
+	var n=document.getElementById('total').innerHTML;
+	var count=0;
+
+	for (var i = 1; i <= n; i++) {
+		var e="_"+i;
+		var b=document.getElementById(e).checked;
+		if(b==true){
+			arrayident[count]=i;
+			count++;
+		}
+		
+
+	}
+	return arrayident;
+} 
+
 
 function task(file){
+	var arrayId;
 	if(file == "Update"){
-		n=0;
-		callTaskId(file, n)
+		arrayId=check();
+		callTaskId(file, op,arrayId);
 	}
 	else{
 		if(file=="Delete"){
-			n=1;
-			callTaskId(file, n);
+			arrayId=check();
+			callTaskId(file, op, arrayId);
 		}
 		else{
 			if(file=="Add"){
-				callTask(file);
+				callTask(file, op);
 			}
 		}
 	}
 	
 }
 
-function callTaskId(file,e){
+function callTaskId(file,op,arrayId){
 	var link;
 	if(window.XMLHttpRequest){
 		link=new XMLHttpRequest();
@@ -54,11 +78,14 @@ function callTaskId(file,e){
 			document.getElementById("show").innerHTML=link.responseText;
 		}
 	}
-	link.open("GET","Controllers/controller"+file+".php?task="+e,true);
+
+	
+	link.open("GET","Controllers/controller"+file+".php?option="+op+"&arrayId="+arrayId,true);
 	link.send();
+
 }
 
-function callTask(file){
+function callTask(file, op){
 	var link;
 	if(window.XMLHttpRequest){
 		link=new XMLHttpRequest();
@@ -70,6 +97,6 @@ function callTask(file){
 			document.getElementById("show").innerHTML=link.responseText;
 		}
 	}
-	link.open("GET","Controllers/controller"+file+".php",true);
+	link.open("GET","Controllers/controller"+file+".php?option="+op,true);
 	link.send();
 }	

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 03-09-2016 a las 05:21:54
+-- Tiempo de generación: 07-09-2016 a las 15:20:29
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.6.23
 
@@ -27,9 +27,20 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `carrera` (
-  `cod_carrera` int(11) NOT NULL,
+  `codigo_carrera` int(11) NOT NULL,
   `nombre_carrera` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `carrera`
+--
+
+INSERT INTO `carrera` (`codigo_carrera`, `nombre_carrera`) VALUES
+(1, 'audiovisuales'),
+(2, 'musica'),
+(3, 'lengua'),
+(4, 'geometria'),
+(6, 'matematicas');
 
 -- --------------------------------------------------------
 
@@ -38,18 +49,11 @@ CREATE TABLE `carrera` (
 --
 
 CREATE TABLE `docente_tutor` (
-  `cod_doc` int(200) NOT NULL,
-  `nom_doc` varchar(500) NOT NULL,
-  `ape_doc` varchar(500) NOT NULL,
-  `email_doc` varchar(500) NOT NULL
+  `codigo_docente` int(200) NOT NULL,
+  `nombre_docente` varchar(500) NOT NULL,
+  `apellido_docente` varchar(500) NOT NULL,
+  `email_docente` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `docente_tutor`
---
-
-INSERT INTO `docente_tutor` (`cod_doc`, `nom_doc`, `ape_doc`, `email_doc`) VALUES
-(1, 'alonso', 'veloz', 'alonso@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -58,22 +62,33 @@ INSERT INTO `docente_tutor` (`cod_doc`, `nom_doc`, `ape_doc`, `email_doc`) VALUE
 --
 
 CREATE TABLE `empresa` (
-  `cod_empresa` int(200) NOT NULL,
-  `nom_empresa` varchar(500) NOT NULL,
-  `repre_empresa` varchar(500) NOT NULL,
-  `cedula_repre` int(200) NOT NULL,
-  `tipo_empre` varchar(500) NOT NULL,
-  `direccion_empre` varchar(500) NOT NULL,
-  `tele_empre` varchar(500) NOT NULL,
-  `sitio_web` varchar(500) NOT NULL
+  `codigo_empresa` int(200) NOT NULL,
+  `nombre_empresa` varchar(500) NOT NULL,
+  `representante_empresa` varchar(500) NOT NULL,
+  `cedula_representante` int(200) NOT NULL,
+  `tipo_empresa` varchar(500) NOT NULL,
+  `direccion_empresa` varchar(500) NOT NULL,
+  `telefono_empresa` varchar(500) NOT NULL,
+  `web_empresa` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `empresa`
 --
 
-INSERT INTO `empresa` (`cod_empresa`, `nom_empresa`, `repre_empresa`, `cedula_repre`, `tipo_empre`, `direccion_empre`, `tele_empre`, `sitio_web`) VALUES
-(1, 'qbit', 'jose', 943423523, 'natural', 'alamos', '21', 'qbit.com');
+INSERT INTO `empresa` (`codigo_empresa`, `nombre_empresa`, `representante_empresa`, `cedula_representante`, `tipo_empresa`, `direccion_empresa`, `telefono_empresa`, `web_empresa`) VALUES
+(1, 'qbit', 'jose', 984235235, 'natural', 'los andes', '22124353', 'qbit.com');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `estado`
+--
+
+CREATE TABLE `estado` (
+  `codigo_estado` int(11) NOT NULL,
+  `estado` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -82,19 +97,11 @@ INSERT INTO `empresa` (`cod_empresa`, `nom_empresa`, `repre_empresa`, `cedula_re
 --
 
 CREATE TABLE `estudiante` (
-  `cod_estu` int(200) NOT NULL,
-  `nombre_estu` varchar(500) NOT NULL,
-  `apellido_estu` varchar(500) NOT NULL,
-  `cedula` varchar(500) NOT NULL
+  `codigo_estudiante` int(200) NOT NULL,
+  `nombre_estudiante` varchar(500) NOT NULL,
+  `apellido_estudiante` varchar(500) NOT NULL,
+  `cedula_estudiante` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `estudiante`
---
-
-INSERT INTO `estudiante` (`cod_estu`, `nombre_estu`, `apellido_estu`, `cedula`) VALUES
-(1, 'José', 'Navarrez', '0976544538'),
-(2, 'Pablo', 'Solano', '09453773845');
 
 -- --------------------------------------------------------
 
@@ -103,11 +110,12 @@ INSERT INTO `estudiante` (`cod_estu`, `nombre_estu`, `apellido_estu`, `cedula`) 
 --
 
 CREATE TABLE `facultad` (
-  `nom_facu` int(200) NOT NULL,
-  `direccion_facu` varchar(500) NOT NULL,
-  `tele_facu` varchar(500) NOT NULL,
-  `email_facu` varchar(500) NOT NULL,
-  `pag_facu` varchar(500) NOT NULL
+  `codigo_facultad` int(200) NOT NULL,
+  `nombre_facultad` varchar(250) NOT NULL,
+  `direccion_facultad` varchar(500) NOT NULL,
+  `telefono_facultad` varchar(500) NOT NULL,
+  `email_facultad` varchar(500) NOT NULL,
+  `web_facultad` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -117,18 +125,11 @@ CREATE TABLE `facultad` (
 --
 
 CREATE TABLE `materia` (
-  `cod_mate` int(150) NOT NULL,
-  `nom_mate` varchar(200) NOT NULL,
-  `curso_mate` varchar(200) NOT NULL,
-  `hora_mate` varchar(200) NOT NULL
+  `codigo_materia` int(150) NOT NULL,
+  `nombre_materia` varchar(200) NOT NULL,
+  `curso_materia` varchar(200) NOT NULL,
+  `hora_materia` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `materia`
---
-
-INSERT INTO `materia` (`cod_mate`, `nom_mate`, `curso_mate`, `hora_mate`) VALUES
-(1, 'matemáticas', 'H', '12:00');
 
 -- --------------------------------------------------------
 
@@ -137,7 +138,7 @@ INSERT INTO `materia` (`cod_mate`, `nom_mate`, `curso_mate`, `hora_mate`) VALUES
 --
 
 CREATE TABLE `semestre` (
-  `cod_semestre` int(200) NOT NULL,
+  `codigo_semestre` int(200) NOT NULL,
   `nombre_semestre` varchar(500) NOT NULL,
   `inicio_semestre` varchar(500) NOT NULL,
   `final_semestre` varchar(500) NOT NULL
@@ -150,16 +151,16 @@ CREATE TABLE `semestre` (
 --
 
 CREATE TABLE `usuario` (
-  `userId` int(50) NOT NULL,
-  `userName` varchar(200) NOT NULL,
-  `userPass` varchar(200) NOT NULL
+  `codigo_usuario` int(50) NOT NULL,
+  `nombre_usuario` varchar(200) NOT NULL,
+  `pass_usuario` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`userId`, `userName`, `userPass`) VALUES
+INSERT INTO `usuario` (`codigo_usuario`, `nombre_usuario`, `pass_usuario`) VALUES
 (1, 'jaime', '1234');
 
 --
@@ -170,50 +171,50 @@ INSERT INTO `usuario` (`userId`, `userName`, `userPass`) VALUES
 -- Indices de la tabla `carrera`
 --
 ALTER TABLE `carrera`
-  ADD UNIQUE KEY `cod_carrera` (`cod_carrera`);
+  ADD UNIQUE KEY `cod_carrera` (`codigo_carrera`);
 
 --
 -- Indices de la tabla `docente_tutor`
 --
 ALTER TABLE `docente_tutor`
-  ADD UNIQUE KEY `cod_doc` (`cod_doc`);
+  ADD UNIQUE KEY `cod_doc` (`codigo_docente`);
 
 --
 -- Indices de la tabla `empresa`
 --
 ALTER TABLE `empresa`
-  ADD UNIQUE KEY `cod_empresa` (`cod_empresa`),
-  ADD UNIQUE KEY `cedula_repre` (`cedula_repre`);
+  ADD UNIQUE KEY `cod_empresa` (`codigo_empresa`),
+  ADD UNIQUE KEY `cedula_repre` (`cedula_representante`);
 
 --
 -- Indices de la tabla `estudiante`
 --
 ALTER TABLE `estudiante`
-  ADD UNIQUE KEY `cod_estu` (`cod_estu`);
+  ADD UNIQUE KEY `cod_estu` (`codigo_estudiante`);
 
 --
 -- Indices de la tabla `facultad`
 --
 ALTER TABLE `facultad`
-  ADD UNIQUE KEY `nom_facu` (`nom_facu`);
+  ADD UNIQUE KEY `nom_facu` (`codigo_facultad`);
 
 --
 -- Indices de la tabla `materia`
 --
 ALTER TABLE `materia`
-  ADD UNIQUE KEY `cod_mate` (`cod_mate`);
+  ADD UNIQUE KEY `cod_mate` (`codigo_materia`);
 
 --
 -- Indices de la tabla `semestre`
 --
 ALTER TABLE `semestre`
-  ADD UNIQUE KEY `cod_semestre` (`cod_semestre`);
+  ADD UNIQUE KEY `cod_semestre` (`codigo_semestre`);
 
 --
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD UNIQUE KEY `cod_usu` (`userId`);
+  ADD UNIQUE KEY `cod_usu` (`codigo_usuario`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -223,42 +224,37 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `carrera`
 --
 ALTER TABLE `carrera`
-  MODIFY `cod_carrera` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `codigo_carrera` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de la tabla `docente_tutor`
 --
 ALTER TABLE `docente_tutor`
-  MODIFY `cod_doc` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `codigo_docente` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `cod_empresa` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `codigo_empresa` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `estudiante`
 --
 ALTER TABLE `estudiante`
-  MODIFY `cod_estu` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT de la tabla `facultad`
---
-ALTER TABLE `facultad`
-  MODIFY `nom_facu` int(200) NOT NULL AUTO_INCREMENT;
+  MODIFY `codigo_estudiante` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `materia`
 --
 ALTER TABLE `materia`
-  MODIFY `cod_mate` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `codigo_materia` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `semestre`
 --
 ALTER TABLE `semestre`
-  MODIFY `cod_semestre` int(200) NOT NULL AUTO_INCREMENT;
+  MODIFY `codigo_semestre` int(200) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `userId` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `codigo_usuario` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
