@@ -1,8 +1,9 @@
 <?php 
 	require("utils.php");
 
+	echo "entre delete";
+	$stringIds=$_GET['idsDelete'];
 	
-	$stringIds=$_GET['arrayId'];
 	
 	
 	class controllerDelete implements controllerStructure_ids{

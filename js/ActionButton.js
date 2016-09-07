@@ -25,8 +25,6 @@ function callData(e){
 }
 
 //peticion para saber el numero
-
-
 function check(){
 	var arrayident=new Array();
 	var n=document.getElementById('total').innerHTML;
@@ -39,34 +37,50 @@ function check(){
 			arrayident[count]=i;
 			count++;
 		}
-		
-
 	}
+	
 	return arrayident;
 } 
 
 
 function task(file){
 	var arrayId;
-	if(file == "Update"){
-		arrayId=check();
-		callTaskId(file, op,arrayId);
-	}
-	else{
-		if(file=="Delete"){
+	var long;
+	switch(file){
+		case "Update":
 			arrayId=check();
-			callTaskId(file, op, arrayId);
-		}
-		else{
-			if(file=="Add"){
-				callTask(file, op);
+			long=arrayId.length;
+			if(long==0){
+				alert("Seleccione un elemento");
+			}else{
+				if(long==1){
+					callTaskUpdate(file, op,arrayId);
+				}else{
+					alert("Solo se acepta un elemento a la vez")
+				}
 			}
-		}
+		break;
+		case "Delete":
+			arrayId=check();
+			
+			arrayId=check();
+			long=arrayId.length;
+			if(long==0){
+				alert("Seleccione un elemento");
+			}else{
+				callTaskDelete(file, op, arrayId);
+			}
+		break;
+		case "Add":
+			callTaskAdd(file, op);
+		break;
+		default:
+		break;
 	}
 	
 }
 
-function callTaskId(file,op,arrayId){
+function callTaskDelete(file,op,idsArray){
 	var link;
 	if(window.XMLHttpRequest){
 		link=new XMLHttpRequest();
@@ -80,12 +94,32 @@ function callTaskId(file,op,arrayId){
 	}
 
 	
-	link.open("GET","Controllers/controller"+file+".php?option="+op+"&arrayId="+arrayId,true);
+	link.open("GET","Controllers/controller"+file+".php?option="+op+"&idsDelete="+idsArray,true);
 	link.send();
 
 }
 
-function callTask(file, op){
+
+function callTaskUpdate(file,op,idParameter){
+	var link;
+	if(window.XMLHttpRequest){
+		link=new XMLHttpRequest();
+	}else{
+		link=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	link.onreadystatechange=function(){
+		if(link.readyState==4 && link.status==200){
+			document.getElementById("show").innerHTML=link.responseText;
+		}
+	}
+
+	
+	link.open("GET","Controllers/controller"+file+".php?option="+op+"&idUpdate="+idParameter,true);
+	link.send();
+
+}
+
+function callTaskAdd(file, op){
 	var link;
 	if(window.XMLHttpRequest){
 		link=new XMLHttpRequest();
