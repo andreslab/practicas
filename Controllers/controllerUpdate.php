@@ -58,7 +58,7 @@
 			$data=$model->facultadModel();
 			$key = $data->fetch_row();
 
-			$arraydata=array($key[0],$key[1],$key[2],$key[3],$key[4]);
+			$arraydata=array($key[0],$key[1],$key[2],$key[3],$key[4], $key[5]);
 			$view= new viewFaculty();
 			$view->showUpdate($arraydata);
 		}

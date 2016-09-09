@@ -14,16 +14,14 @@
 
 	if($action=="ACTUALIZAR"){
 		$key=$_POST['key'];
-		echo "estoy actualizando";
 		$arraySave=array($key, $nombre_empresa,$representante_empresa,$cedula_represetante,$tipo_empresa,$direccion_empresa,$telefono_empresa,$web_empresa);
 		$modelUpdate= new modelUpdate();
 		$modelUpdate->empresaModel($arraySave);
-		header("Loader:session.php");
+		header("Location:../session.php");
 	}else{
-		echo "estoy guardando";
 		$arraySave=array($nombre_empresa,$representante_empresa,$cedula_represetante,$tipo_empresa,$direccion_empresa,$telefono_empresa,$web_empresa);
 		$modelUpdate= new modelAdd();
 		$modelUpdate->empresaModel("isssssss",$arraySave);
-		header("Loader:session.php");
+		header("Location:../session.php");
 	}
  ?>

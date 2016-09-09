@@ -59,7 +59,7 @@
 
 
 		private function execute($sql){
-			$response=$this->resp->updateRequest($sql);
+			$response=$this->resp->addRequest($sql);
 			return $response;
 		}
 

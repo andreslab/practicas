@@ -10,17 +10,14 @@
 
 	if($action=="ACTUALIZAR"){
 		$key=$_POST['key'];
-		echo "estoy actualizando";
 		$arraySave=array($key, $nombre_docente, $apellido_docente, $email_docente);
 		$modelUpdate= new modelUpdate();
 		$modelUpdate->docenteModel($arraySave);
-		header("Loader:session.php");
+		header("Location:../session.php");
 	}else{
-		echo "estoy guardando";
-
 		$arraySave=array($nombre_docente, $apellido_docente, $email_docente);
 		$modelUpdate= new modelAdd();
 		$modelUpdate->docenteModel("isss", $arraySave);
-		header("Loader:session.php");
+		header("Location:../session.php");
 	}
  ?>

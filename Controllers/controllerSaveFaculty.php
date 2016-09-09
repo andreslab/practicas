@@ -12,17 +12,15 @@
 
 	if($action=="ACTUALIZAR"){
 		$key=$_POST['key'];
-		echo "estoy actualizando";
 		$arraySave=array($key, $nombre_facultad, $direccion_facultad, $telefono_facultad, $email_facultad, $web_facultad);
 		$modelUpdate= new modelUpdate();
 		$modelUpdate->facultadModel($arraySave);
-		header("Loader:session.php");
+		header("Location:../session.php");
 	}else{
-		echo "estoy guardando";
 		$arraySave=array($nombre_facultad, $direccion_facultad, $telefono_facultad, $email_facultad, $web_facultad);
 		$modelUpdate= new modelAdd();
 		$modelUpdate->facultadModel("isssss",$arraySave);
-		header("Loader:session.php");
+		header("Location:../session.php");
 	}
 
  ?>
